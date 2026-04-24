@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Matini | Streamer River</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Floating particles background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <span class="logo-text">MATINI</span>
+            <span class="logo-dot">●</span>
+        </div>
+        <div class="nav-links">
+            <a href="#inicio" class="nav-link">INICIO</a>
+            <a href="#sobre-mi" class="nav-link">SOBRE MÍ</a>
+            <a href="#streams" class="nav-link">STREAMS</a>
+            <a href="#redes" class="nav-link">REDES</a>
+            <a href="#contacto" class="nav-link">CONTACTO</a>
+        </div>
+        <div class="nav-badge">
+            <span class="live-dot"></span>
+            <span>STREAMER</span>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">MATINO</div>
+            <p class="footer-sub">Creador de contenido de fútbol · Streamer Afiliado Kick</p>
+            <p class="footer-copy">© 2025 Mateo Tamini — Todos los derechos reservados</p>
+        </div>
+        <div class="footer-band"></div>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
